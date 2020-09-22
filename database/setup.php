@@ -1,21 +1,15 @@
 <?php
 
-try {
-    $conn = new PDO("mysql:host=localhost;dbname=test", "root","");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
+require_once './connection.php';
 
-    $stmt = $conn->prepare("CREATE TABLE IF NOT EXISTS tp_espace_membre (
+    $stmt = $conn->prepare(
+        "CREATE TABLE members(
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         pseudo VARCHAR(30) NOT NULL,
         email VARCHAR (255) NOT NULL,
-        password TEXT NOT NULL
-        )");
+        password TEXT NOT NULL )"
+    );
+    $stmt->execute(); 
 
-    $stmt->execute();
-
-    } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-
+    
 ?>

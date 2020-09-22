@@ -1,7 +1,8 @@
 <?php
 
-if (isset($_POST['email == NULL OR password == NULL']));
-echo "E-mail ou mot de passe manquant.";
-
-(isset($_POST['email !== NULL AND password !== NULL']));
-echo "tdc";
+try {
+    $conn = new PDO("mysql:host=localhost;dbname=tp_espace_membre", "root","");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}   
