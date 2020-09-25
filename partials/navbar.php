@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="inscription">Inscription</a>
+        <a class="nav-link" href="views/inscription.php">Inscription</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="connexion">Connexion</a>
