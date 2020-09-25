@@ -1,12 +1,4 @@
-<<<<<<< Updated upstream
-<div class="d-flex">
-        <form action="../functions/inscription.php" method="POST" class="p-5">
-            <div class="form-group">
-                <label for="email">Votre E-Mail</label>
-                <input type="email" class="form-control" name="email" required>
-=======
 <?php
-
 
 include_once "../partials/header.php";
 include_once "../partials/navbar.php";
